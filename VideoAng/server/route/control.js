@@ -6,7 +6,7 @@ const { Video } = require('../model/video.js')
 const db = 'mongodb+srv://Anubhav:NnQCPZRSbS2tsERu@cluster0-s0uiw.mongodb.net/test?retryWrites=true&w=majority'
 // mongoose.Promise = global.Promise;
 
-mongoose.connect(db, (err) => {
+mongoose.connect(db,{ useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
 
    if (err)
       console.error('Error! ' + err)
